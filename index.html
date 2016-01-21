@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Infoskjerm</title>
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="infoscreenApp">
+        <div class="container">
+            <div class="page-header">
+                <h1>Infoskjerm</h1>
+            </div>
+            <div class="well well-small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <form ng-controller="infoscreenCtrl" ng-submit="submit()" id="form" name="form">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <h2>Dynamisk</h2>
+                        <div class="form-group {{form.maltallForManed.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="maltallForManed">maltallForManed</label>
+                            <input ng-model="data.maltallForManed" class="form-control" id="maltallForManed" name="maltallForManed" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.maltallForAar.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="maltallForAar">maltallForAar</label>
+                            <input ng-model="data.maltallForAar" class="form-control" id="maltallForAar" name="maltallForAar" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.antallArk.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="antallArk">antallArk</label>
+                            <input ng-model="data.antallArk" class="form-control" id="antallArk" name="antallArk" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.antallDokumenter.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="antallDokumenter">antallDokumenter</label>
+                            <input ng-model="data.antallDokumenter" class="form-control" id="antallDokumenter" name="antallDokumenter" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.eDok.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="eDok">eDok</label>
+                            <input ng-model="data.eDok" class="form-control" id="eDok" name="eDok" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.manuellSkanning.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="manuellSkanning">manuellSkanning</label>
+                            <input ng-model="data.manuellSkanning" class="form-control" id="manuellSkanning" name="manuellSkanning" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.manuellSkanningRest.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="manuellSkanningRest">manuellSkanningRest</label>
+                            <input ng-model="data.manuellSkanningRest" class="form-control" id="manuellSkanningRest" name="manuellSkanningRest" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.antallBunker.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="antallBunker">antallBunker</label>
+                            <input ng-model="data.antallBunker" class="form-control" id="antallBunker" name="antallBunker" type="number" value="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h2>Statisk</h2>
+                        <div class="form-group">
+                            <label for="produsertIDag">produsertIDag</label>
+                            <input ng-model="data.produsertIDag" class="form-control" id="produsertIDag" readonly type="text" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="produsertDenneManed">produsertDenneManed</label>
+                            <input ng-model="data.produsertDenneManed" class="form-control" id="produsertDenneManed" readonly type="text" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="produsertIAar">produsertIAar</label>
+                            <input ng-model="data.produsertIAar" class="form-control" id="produsertIAar" readonly type="text" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="maltallHittilIManed">maltallHittilIManed</label>
+                            <input ng-model="data.maltallHittilIManed" class="form-control" id="maltallHittilIManed" readonly type="text" value="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                        <div class="form-group">
+                            <button ng-disabled="form.$invalid || form.$pristine" class="btn btn-success" type="submit">Lagre</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="loader">
+            <div>
+                <span aria-hidden="true" class="glyphicon glyphicon-cog text-muted rotating"></span>
+            </div>
+        </div>
+    </body>
+</html>
