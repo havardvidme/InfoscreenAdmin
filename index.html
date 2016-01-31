@@ -25,20 +25,28 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <h2>Dynamisk</h2>
+                        <div class="form-group {{form.produsertIDag.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="produsertIDag">Produsert i dag</label>
+                            <input ng-model="data.produsertIDag" class="form-control" id="produsertIDag" name="produsertIDag" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.dagligMaltall.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="dagligMaltall">Daglig måltall</label>
+                            <input ng-model="data.dagligMaltall" class="form-control" id="dagligMaltall" name="dagligMaltall" type="number" value="">
+                        </div>
                         <div class="form-group {{form.maltallForManed.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="maltallForManed">maltallForManed</label>
+                            <label for="maltallForManed">Måltall for måned</label>
                             <input ng-model="data.maltallForManed" class="form-control" id="maltallForManed" name="maltallForManed" type="number" value="">
                         </div>
                         <div class="form-group {{form.maltallForAar.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="maltallForAar">maltallForAar</label>
+                            <label for="maltallForAar">Måltall for år</label>
                             <input ng-model="data.maltallForAar" class="form-control" id="maltallForAar" name="maltallForAar" type="number" value="">
                         </div>
                         <div class="form-group {{form.antallArk.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="antallArk">antallArk</label>
+                            <label for="antallArk">Antall ark</label>
                             <input ng-model="data.antallArk" class="form-control" id="antallArk" name="antallArk" type="number" value="">
                         </div>
                         <div class="form-group {{form.antallDokumenter.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="antallDokumenter">antallDokumenter</label>
+                            <label for="antallDokumenter">Antall dokumenter</label>
                             <input ng-model="data.antallDokumenter" class="form-control" id="antallDokumenter" name="antallDokumenter" type="number" value="">
                         </div>
                         <div class="form-group {{form.eDok.$valid ? 'has-success' : 'has-error'}}">
@@ -46,34 +54,30 @@
                             <input ng-model="data.eDok" class="form-control" id="eDok" name="eDok" type="number" value="">
                         </div>
                         <div class="form-group {{form.manuellSkanning.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="manuellSkanning">manuellSkanning</label>
+                            <label for="manuellSkanning">Manuell skanning</label>
                             <input ng-model="data.manuellSkanning" class="form-control" id="manuellSkanning" name="manuellSkanning" type="number" value="">
                         </div>
                         <div class="form-group {{form.manuellSkanningRest.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="manuellSkanningRest">manuellSkanningRest</label>
+                            <label for="manuellSkanningRest">Manuell skanning rest</label>
                             <input ng-model="data.manuellSkanningRest" class="form-control" id="manuellSkanningRest" name="manuellSkanningRest" type="number" value="">
                         </div>
                         <div class="form-group {{form.antallBunker.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="antallBunker">antallBunker</label>
+                            <label for="antallBunker">Antall bunker</label>
                             <input ng-model="data.antallBunker" class="form-control" id="antallBunker" name="antallBunker" type="number" value="">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <h2>Statisk</h2>
                         <div class="form-group">
-                            <label for="produsertIDag">produsertIDag</label>
-                            <input ng-model="data.produsertIDag" class="form-control" id="produsertIDag" readonly type="text" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="produsertDenneManed">produsertDenneManed</label>
+                            <label for="produsertDenneManed">Produsert denne måneden</label>
                             <input ng-model="data.produsertDenneManed" class="form-control" id="produsertDenneManed" readonly type="text" value="">
                         </div>
                         <div class="form-group">
-                            <label for="produsertIAar">produsertIAar</label>
+                            <label for="produsertIAar">Produsert i år</label>
                             <input ng-model="data.produsertIAar" class="form-control" id="produsertIAar" readonly type="text" value="">
                         </div>
                         <div class="form-group">
-                            <label for="maltallHittilIManed">maltallHittilIManed</label>
+                            <label for="maltallHittilIManed">Måltall hittil denne måneden</label>
                             <input ng-model="data.maltallHittilIManed" class="form-control" id="maltallHittilIManed" readonly type="text" value="">
                         </div>
                     </div>
