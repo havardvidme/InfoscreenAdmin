@@ -25,10 +25,6 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <h2>Dynamisk</h2>
-                        <div class="form-group {{form.produsertIDag.$valid ? 'has-success' : 'has-error'}}">
-                            <label for="produsertIDag">Produsert i dag</label>
-                            <input ng-model="data.produsertIDag" class="form-control" id="produsertIDag" name="produsertIDag" type="number" value="">
-                        </div>
                         <div class="form-group {{form.dagligMaltall.$valid ? 'has-success' : 'has-error'}}">
                             <label for="dagligMaltall">Daglig måltall</label>
                             <input ng-model="data.dagligMaltall" class="form-control" id="dagligMaltall" name="dagligMaltall" type="number" value="">
@@ -36,6 +32,10 @@
                         <div class="form-group {{form.maltallForManed.$valid ? 'has-success' : 'has-error'}}">
                             <label for="maltallForManed">Måltall for måned</label>
                             <input ng-model="data.maltallForManed" class="form-control" id="maltallForManed" name="maltallForManed" type="number" value="">
+                        </div>
+                        <div class="form-group {{form.maltallHittilIManed.$valid ? 'has-success' : 'has-error'}}">
+                            <label for="maltallHittilIManed">Måltall hittil i måned</label>
+                            <input ng-model="data.maltallHittilIManed" class="form-control" id="maltallHittilIManed" name="maltallHittilIManed" type="number" value="">
                         </div>
                         <div class="form-group {{form.maltallForAar.$valid ? 'has-success' : 'has-error'}}">
                             <label for="maltallForAar">Måltall for år</label>
@@ -69,16 +69,16 @@
                     <div class="col-xs-12 col-sm-6">
                         <h2>Statisk</h2>
                         <div class="form-group">
+                            <label for="produsertIDag">Produsert i dag</label>
+                            <input ng-model="data.produsertIDag" class="form-control" id="produsertIDag" readonly type="text" value="">
+                        </div>
+                        <div class="form-group">
                             <label for="produsertDenneManed">Produsert denne måneden</label>
                             <input ng-model="data.produsertDenneManed" class="form-control" id="produsertDenneManed" readonly type="text" value="">
                         </div>
                         <div class="form-group">
                             <label for="produsertIAar">Produsert i år</label>
                             <input ng-model="data.produsertIAar" class="form-control" id="produsertIAar" readonly type="text" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="maltallHittilIManed">Måltall hittil denne måneden</label>
-                            <input ng-model="data.maltallHittilIManed" class="form-control" id="maltallHittilIManed" readonly type="text" value="">
                         </div>
                     </div>
                     <div class="col-xs-12">
