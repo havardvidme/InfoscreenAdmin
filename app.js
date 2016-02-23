@@ -1,13 +1,14 @@
 angular.module('infoscreenApp', [])
 .controller('infoscreenCtrl', function ($scope, $http) {
-    $scope.fields = ['antallArk','antallBunker','antallDokumenter','eDok','maltallForAar','maltallForManed','manuellSkanning','manuellSkanningRest'];
     $scope.data = {};
     
     $scope.submit = function () {
         $('#loader').removeClass('hidden');
         var arr = {};
-        angular.forEach($scope.fields, function (name, idx) {
-            this[name] = $scope.data[name];
+        angular.forEach($scope.data, function (value, name) {
+            if ($scope.form.hasOwnProperty(name)) {
+                this[name] = value;
+            }
         }, arr);
         $http({
             data: arr
